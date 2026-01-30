@@ -62,29 +62,33 @@
         <h2 style="margin-bottom: 1.5rem;">O Ciclo da Previsibilidade</h2>
         <p>A NorthWay aplica o rigor científico em cada etapa do seu crescimento.</p>
 
-        <!-- V4 Inspired Infinitely Loop Visual -->
+        <!-- High-Performance Infinity Loop -->
         <div class="loop-container">
-          <svg class="loop-svg" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M400 300C400 300 300 100 150 100C32.0673 100 32.0673 500 150 500C300 500 400 300 400 300ZM400 300C400 300 500 100 650 100C767.933 100 767.933 500 650 500C500 500 400 300 400 300Z"
-              stroke="white" stroke-width="2" stroke-dasharray="8 8" />
+          <svg class="loop-svg" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="infinity-path"
+              d="M400 225C400 225 480 80 620 80C740 80 740 370 620 370C480 370 400 225 400 225C400 225 320 80 180 80C60 80 60 370 180 370C320 370 400 225 400 225Z"
+              stroke="white" stroke-width="2" stroke-dasharray="10 10" />
+            <path class="infinity-path-glow"
+              d="M400 225C400 225 480 80 620 80C740 80 740 370 620 370C480 370 400 225 400 225C400 225 320 80 180 80C60 80 60 370 180 370C320 370 400 225 400 225Z"
+              stroke="var(--color-red)" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 10"
+              style="opacity: 0.2; filter: blur(8px);" />
           </svg>
 
-          <div class="loop-step step-aq">
-            <i data-lucide="handshake"></i>
-            <span>Aquisição</span>
-          </div>
           <div class="loop-step step-en">
-            <i data-lucide="message-circle"></i>
+            <div class="step-icon"><i data-lucide="message-circle"></i></div>
             <span>Engajamento</span>
           </div>
+          <div class="loop-step step-re">
+            <div class="step-icon"><i data-lucide="magnet"></i></div>
+            <span>Retenção</span>
+          </div>
           <div class="loop-step step-mo">
-            <i data-lucide="trending-up"></i>
+            <div class="step-icon"><i data-lucide="trending-up"></i></div>
             <span>Monetização</span>
           </div>
-          <div class="loop-step step-re">
-            <i data-lucide="magnet"></i>
-            <span>Retenção</span>
+          <div class="loop-step step-aq">
+            <div class="step-icon"><i data-lucide="handshake"></i></div>
+            <span>Aquisição</span>
           </div>
         </div>
 
@@ -112,7 +116,7 @@
   <div class="section-divider"></div>
 
   <section class="section"
-    style="text-align: center; background: radial-gradient(circle at center, rgba(218,37,28,0.03) 0%, transparent 70%);">
+    style="text-align: center; background: radial-gradient(circle at center, rgba(255,31,75,0.03) 0%, transparent 70%);">
     <div class="container reveal">
       <h2 style="margin-bottom: 3rem; font-size: clamp(3rem, 8vw, 6rem);">O progresso exige <br><span
           class="italic">Direção Científica.</span>
