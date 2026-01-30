@@ -1,17 +1,13 @@
 :root {
     --font-main: 'Inter', system-ui, sans-serif;
+    --bg-dark: #000000;
+    --bg-card: #0a0a0a;
+    --color-white: #ffffff;
+    --color-red: #ff3131;
+    --color-red-dim: #cc0000;
 
-    /* High Contrast Palette (Institutional) */
-    --bg-white: #ffffff;
-    --bg-dark: #050505;
-    --color-black: #000000;
-    --color-red: #da251c;
-    --color-red-hover: #b91c1c;
-    --color-gray-100: #f8fafc;
-    --color-gray-600: #475569;
-
-    --spacing-section: 12rem;
-    --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --spacing-section: 6rem;
+    --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     --max-width: 1200px;
 }
 
@@ -27,24 +23,59 @@ html {
 
 body {
     font-family: var(--font-main);
-    background-color: var(--bg-white);
-    color: var(--color-black);
-    line-height: 1.5;
+    background-color: var(--bg-dark);
+    color: var(--color-white);
+    line-height: 1.4;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
 }
 
-/* Navigation (Institutional Style) */
+/* Typography (Mobile First) */
+h1 {
+    font-size: clamp(2.2rem, 8vw, 5rem);
+    font-weight: 950;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 6vw, 3.2rem);
+    font-weight: 950;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+}
+
+p {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.3;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 4rem;
+    }
+
+    --spacing-section: 12rem;
+}
+
+/* Nav (Mobile Ready) */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(20px);
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    transition: var(--transition-smooth);
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-content {
@@ -53,134 +84,213 @@ nav {
     align-items: center;
 }
 
-.container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 4rem;
-}
-
 .nav-logo img {
-    height: 60px;
-    /* LARGE LOGO as requested */
+    height: 35px;
     width: auto;
-    display: block;
 }
 
 .nav-links {
-    display: flex;
-    gap: 3rem;
-    align-items: center;
+    display: none;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--color-black);
-    font-weight: 700;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    transition: color 0.3s ease;
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+    }
+
+    .nav-logo img {
+        height: 50px;
+    }
 }
 
-.nav-links a:hover {
-    color: var(--color-red);
-}
-
-/* Buttons (Sharp & Bold - Image 0 Style) */
-.btn-assessment {
+.btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1.2rem 2.8rem;
-    font-weight: 950;
-    font-size: 0.85rem;
-    text-decoration: none;
+    padding: 1.2rem 2.5rem;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    border-radius: 0;
+    text-decoration: none;
+    border-radius: 4px;
     transition: var(--transition-smooth);
-    cursor: pointer;
-    border: 2px solid transparent;
+    font-size: 0.85rem;
 }
 
-.btn-red {
+.btn-primary {
     background: var(--color-red);
     color: white;
 }
 
-.btn-outline {
-    border: 2px solid var(--color-black);
-    color: var(--color-black);
-    background: transparent;
+.btn-primary:hover {
+    background: var(--color-white);
+    color: black;
+    transform: translateY(-2px);
 }
 
-.btn-red:hover {
-    background: var(--color-red-hover);
-    transform: translateY(-3px);
+/* Hero */
+.section {
+    padding: var(--spacing-section) 0;
 }
 
-.btn-outline:hover {
-    background: var(--color-black);
-    color: white;
-    transform: translateY(-3px);
-}
-
-/* Hero Section (Aligned with Image 0) */
 .hero {
-    padding-top: 180px;
-    padding-bottom: 10rem;
-    background: var(--bg-white);
-    text-align: left;
+    text-align: center;
+    padding-top: 10rem;
 }
 
 .hero h1 {
-    font-size: clamp(3.5rem, 10vw, 8rem);
-    font-weight: 950;
-    letter-spacing: -0.06em;
-    line-height: 0.85;
-    margin-bottom: 3rem;
-    color: var(--color-black);
+    margin-bottom: 2rem;
 }
 
 .hero p {
-    font-size: 1.8rem;
-    font-weight: 500;
-    color: var(--color-gray-600);
-    max-width: 900px;
-    margin-bottom: 5rem;
-    line-height: 1.2;
+    max-width: 850px;
+    margin: 0 auto 4rem;
 }
 
-.text-red {
-    color: var(--color-red);
-}
-
-/* Video Framing - High Impact */
-.video-section {
+.video-box {
     width: 100%;
     aspect-ratio: 16/9;
-    background: #000;
-    box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.1);
-    position: relative;
-    border: 4px solid #fff;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6);
+    margin-top: 5rem;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-.video-section iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* V4 LOOP Visual (Mobile Optimized) */
+.loop-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 6rem auto;
+    aspect-ratio: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loop-svg {
     width: 100%;
     height: 100%;
+    opacity: 0.15;
 }
 
-/* Modern Dark Sections (Inspired by Image 1) */
-.section-dark {
-    background: var(--bg-dark);
-    color: white;
-    padding: 12rem 0;
+.loop-step {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    transition: var(--transition-smooth);
+    width: 120px;
+    text-align: center;
 }
 
-/* Reveal Logic */
+.loop-step i {
+    color: var(--color-red);
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.loop-step span {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+}
+
+/* Positioning points - Infinito V4 style */
+.step-aq {
+    bottom: 5%;
+    left: 15%;
+}
+
+/* Aquisição */
+.step-en {
+    top: 5%;
+    left: 15%;
+}
+
+/* Engajamento */
+.step-mo {
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+/* Monetização (Center) */
+.step-re {
+    top: 50%;
+    right: 5%;
+    translate: 0 -50%;
+}
+
+/* Retenção */
+
+@media (max-width: 600px) {
+    .loop-container {
+        aspect-ratio: 1;
+        margin: 4rem auto;
+    }
+
+    .loop-step {
+        width: 100px;
+    }
+
+    .loop-step i {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .loop-step span {
+        font-size: 0.65rem;
+    }
+
+    .step-re {
+        right: 0;
+    }
+
+    .step-aq {
+        left: 0;
+    }
+}
+
+/* Methodology Cards */
+.method-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 5rem;
+}
+
+.method-card {
+    background: var(--bg-card);
+    padding: 3rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: var(--transition-smooth);
+}
+
+.method-card:hover {
+    border-color: rgba(255, 49, 49, 0.4);
+    transform: translateY(-5px);
+}
+
+.method-card h3 {
+    color: var(--color-red);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.method-card p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Reveal */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -192,20 +302,13 @@ nav {
     transform: translateY(0);
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 0 2rem;
-    }
+.text-red {
+    color: var(--color-red);
+}
 
-    .nav-links {
-        display: none;
-    }
-
-    .hero h1 {
-        font-size: 4rem;
-    }
-
-    .hero p {
-        font-size: 1.4rem;
+@media (max-width: 480px) {
+    .btn {
+        width: 100%;
+        padding: 1.4rem 1rem;
     }
 }
