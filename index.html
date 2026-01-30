@@ -4,147 +4,201 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NorthWay Company | Aceleração de Resultados</title>
+  <title>NorthWay | Assessoria de Marketing Estratégico</title>
   <meta name="description"
-    content="Especialistas em aceleração de vendas, CRM para WhatsApp e consultoria estratégica.">
+    content="Especialistas em aceleração de vendas, CRM para WhatsApp e consultoria estratégica. Menos improviso, mais previsibilidade.">
 
-  <!-- Fonts -->
+  <!-- Premium Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
-  <div id="app">
-    <!-- Navbar -->
-    <nav class="nav">
-      <div class="container nav-content">
-        <div class="logo">
-          <span class="logo-dot"></span>
-          NorthWay<span>Company</span>
+
+  <!-- Navigation bar -->
+  <nav>
+    <div class="container nav-content">
+      <div class="nav-logo">NorthWay <span class="text-red">Company</span></div>
+      <div style="display: flex; gap: 2rem; align-items: center;">
+        <a href="#inicio" style="text-decoration: none; color: black; font-weight: 600; font-size: 0.9rem;">Home</a>
+        <a href="#metodo" style="text-decoration: none; color: black; font-weight: 600; font-size: 0.9rem;">Método</a>
+        <a href="https://wa.me/5542999896358" class="btn btn-primary"
+          style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">Agendar conversa</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="section hero">
+    <div class="container reveal">
+      <h1>Marketing sem processo <br>é só <span class="text-red">barulho</span>.</h1>
+      <p>Empresas que crescem de verdade constroem direção, método e previsibilidade.</p>
+
+      <div class="hero-actions" style="display: flex; gap: 1.5rem;">
+        <a href="#pilares" class="btn btn-primary">Quero crescer com processo</a>
+        <a href="https://wa.me/5542999896358" class="btn btn-outline-black">Agendar uma conversa</a>
+      </div>
+
+      <div class="video-container">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FPJD88l81Qo"
+          title="NorthWay Institutional" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manifesto Section -->
+  <section class="section dark-section">
+    <div class="container reveal">
+      <div class="manifesto-text">
+        “Sem processo você não tem <span class="text-red">direção</span>.<br>
+        Sem direção, qualquer lugar serve.”
+      </div>
+    </div>
+  </section>
+
+  <!-- Belief Break Section -->
+  <section class="section">
+    <div class="container reveal">
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h2 style="font-size: 3.5rem; margin-bottom: 2rem;">Você sabia que marketing não é <br><span class="text-red">só
+            postar nas redes?</span></h2>
+        <p style="font-size: 1.5rem; color: #64748b; font-weight: 500;">Crescimento saudável não acontece por acaso. Ele
+          passa por estrutura, clareza e decisões bem direcionadas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 4 Pillars Section -->
+  <section id="pilares" class="section" style="background-color: var(--color-gray-100);">
+    <div class="container reveal">
+      <div style="text-align: center; margin-bottom: 5rem;">
+        <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Os 4 pilares do crescimento</h2>
+        <p style="font-size: 1.25rem; color: #64748b;">Se um desses pilares não funciona, o negócio não cresce.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-item">
+          <div class="icon"><i data-lucide="target"></i></div>
+          <h3>Atrair</h3>
+          <p>Atrair as pessoas certas, com estratégia e canais previsíveis.</p>
         </div>
-        <div class="nav-links">
-          <a href="#inicio">Home</a>
-          <a href="/institutional.html">Framework</a>
-          <a href="/diagnostico.html">Consultoria</a>
-          <a href="/checkout.html" class="btn btn-primary btn-small">Acessar CRM</a>
+        <div class="pillar-item">
+          <div class="icon"><i data-lucide="users"></i></div>
+          <h3>Engajar</h3>
+          <p>Construir autoridade, relacionamento e confiança através de estratégia consistente.</p>
+        </div>
+        <div class="pillar-item">
+          <div class="icon"><i data-lucide="trending-up"></i></div>
+          <h3>Vender</h3>
+          <p>Converter interesse em faturamento real através de um processo comercial estruturado.</p>
+        </div>
+        <div class="pillar-item">
+          <div class="icon"><i data-lucide="refresh-cw"></i></div>
+          <h3>Reter</h3>
+          <p>Manter seus clientes, vender novamente e transformar clientes em promotores.</p>
         </div>
       </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <header id="inicio" class="hero">
-      <div class="hero-glow"></div>
-      <div class="container hero-content">
-        <div class="hero-badges">
-          <span class="badge">Estratégia & Tecnologia</span>
-          <span class="badge-outline">Aceleração 2026</span>
-        </div>
-        <h1>Marketing não é só <br><span class="red-gradient-text">Postar nas Redes</span></h1>
-        <p class="hero-desc">Elevamos o patamar da sua operação comercial com tecnologia de ponta e consultoria
-          consultiva especializada.</p>
-
-        <!-- Institutional Video -->
-        <div class="hero-visual" style="margin-bottom: 3rem;">
-          <div class="glass-card mockup-container"
-            style="aspect-ratio: 16/9; padding: 0; overflow: hidden; border-radius: 1.5rem;">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FPJD88l81Qo"
-              title="NorthWay Institutional" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-
-        <div class="hero-actions">
-          <a href="https://wa.me/5542999896358?text=Olá!%20Vi%20o%20site%20e%20quero%20saber%20mais."
-            class="btn btn-primary">
-            Agendar Diagnóstico Grátis
-            <i data-lucide="arrow-right" class="w-5 h-5"></i>
-          </a>
-          <a href="#metodo" class="btn btn-outline">Conhecer o Método</a>
-        </div>
+      <div style="text-align: center; margin-top: 5rem;">
+        <h4 style="font-size: 1.5rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em;">Crescimento
+          não é sorte. <span class="text-red">É sistema.</span></h4>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <!-- Greetings Section -->
-    <section class="section-padding" style="background: var(--bg-secondary);">
-      <div class="container">
-        <div class="glass-card" style="padding: 4rem; text-align: center;">
-          <h2 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Crescimento matemático e
-            previsível</h2>
-          <p style="font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
-            Para nós, marketing não é um gasto — é um motor de tração. O crescimento saudável da sua empresa passa por
-            um processo estruturado de 4 etapas.
-          </p>
+  <!-- The Market Problem -->
+  <section class="section dark-section">
+    <div class="container reveal">
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; align-items: center;">
+        <div>
+          <h2 style="font-size: 3.5rem; margin-bottom: 2rem;">O problema do <span class="text-red">mercado</span></h2>
+          <ul class="problem-list">
+            <li style="color: white">Postagens sem estratégia real</li>
+            <li style="color: white">Falta de processo comercial definido</li>
+            <li style="color: white">Leads perdidos por falta de acompanhamento</li>
+            <li style="color: white">Clientes que não retornam por falta de nutrição</li>
+          </ul>
+          <p style="font-size: 1.25rem; margin-top: 3rem; font-weight: 700;">Sem processo, marketing vira custo.
+            <br><span class="text-red">Com processo, vira ativo.</span></p>
         </div>
-      </div>
-    </section>
-
-    <!-- Method Section: 4 Stages -->
-    <section id="metodo" class="section-padding">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="gradient-text">O Crescimento Saudável</h2>
-          <p>Dividimos o sucesso em 4 pilares fundamentais.</p>
-        </div>
-
-        <div class="features-grid">
-          <div class="glass-card feature-card">
-            <div class="icon-wrap"><i data-lucide="target"></i></div>
-            <h3>1. Atrair</h3>
-            <p>Captamos as pessoas certas para o seu negócio através de canais qualificados.</p>
-          </div>
-          <div class="glass-card feature-card active">
-            <div class="icon-wrap"><i data-lucide="users"></i></div>
-            <h3>2. Engajar</h3>
-            <p>Criamos relacionamento e autoridade com conteúdo que gera confiança.</p>
-          </div>
-          <div class="glass-card feature-card">
-            <div class="icon-wrap"><i data-lucide="trending-up"></i></div>
-            <h3>3. Vender</h3>
-            <p>Transformamos interesse em fechamento com processo e estratégia comercial.</p>
-          </div>
-          <div class="glass-card feature-card">
-            <div class="icon-wrap"><i data-lucide="refresh-cw"></i></div>
-            <h3>4. Reter</h3>
-            <p>Vendemos de novo para o mesmo cliente e geramos indicações orgânicas.</p>
+        <div style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 5rem;">
+          <h3 style="font-size: 2rem; margin-bottom: 2rem;">Como a Northway atua</h3>
+          <div style="display: flex; flex-direction: column; gap: 2rem;">
+            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+              <span style="font-weight: 900; color: var(--color-red);">1.</span>
+              <div>
+                <h4 style="margin-bottom: 0.5rem; font-size: 1rem;">Diagnóstico estratégico</h4>
+                <p style="font-size: 0.9rem; color: #94a3b8;">Identificação profunda de gargalos e oportunidades.</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+              <span style="font-weight: 900; color: var(--color-red);">2.</span>
+              <div>
+                <h4 style="margin-bottom: 0.5rem; font-size: 1rem;">Estruturação de processos</h4>
+                <p style="font-size: 0.9rem; color: #94a3b8;">Desenho do método operacional unificado.</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+              <span style="font-weight: 900; color: var(--color-red);">3.</span>
+              <div>
+                <h4 style="margin-bottom: 0.5rem; font-size: 1rem;">Execução com método</h4>
+                <p style="font-size: 0.9rem; color: #94a3b8;">Mão na massa para implementar a nova estrutura.</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+              <span style="font-weight: 900; color: var(--color-red);">4.</span>
+              <div>
+                <h4 style="margin-bottom: 0.5rem; font-size: 1rem;">Otimização contínua</h4>
+                <p style="font-size: 0.9rem; color: #94a3b8;">Acompanhamento e ajuste de performance real.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer-grid">
-        <div class="footer-brand">
-          <div class="logo">NorthWay<span>Company</span></div>
-          <p>Transformando processos comerciais em máquinas de lucro previsível.</p>
-        </div>
-        <div class="footer-links">
-          <h4>Soluções</h4>
-          <a href="/checkout.html">NorthWay CRM</a>
-          <a href="/institutional.html">Framework NGS</a>
-          <a href="/diagnostico.html">Consultoria Expert</a>
-        </div>
-        <div class="footer-contact">
-          <h4>Contato</h4>
-          <p>comercial@northwaycompany.com.br</p>
-          <div class="social-links">
-            <a href="https://www.instagram.com/northway.mkt/" target="_blank"><i data-lucide="instagram"></i></a>
-            <a href="#"><i data-lucide="linkedin"></i></a>
-          </div>
-        </div>
+  <!-- Positioning Statements -->
+  <section class="section">
+    <div class="container reveal" style="text-align: center;">
+      <div style="display: flex; flex-direction: column; gap: 4rem;">
+        <h2 style="font-size: 4rem; text-transform: uppercase;">“Menos improviso. <br><span class="text-red">Mais
+            previsibilidade.</span>”</h2>
+        <h2 style="font-size: 3rem; color: #64748b;">“Processo separa <span style="color: black">hype</span> de <span
+            class="text-red">legado</span>.”</h2>
+        <h2 style="font-size: 2rem; font-weight: 900; letter-spacing: 0.2em; color: black;">MARKETING COM DIREÇÃO.</h2>
       </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <p>&copy; 2026 NorthWay Company. Todos os direitos reservados.</p>
-        </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section dark-section" style="border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="container reveal" style="text-align: center;">
+      <h2 style="font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 2rem;">Se você sente que trabalha muito e cresce
+        pouco, <br><span class="text-red">o problema não é esforço. É direção.</span></h2>
+      <div style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 4rem;">
+        <a href="https://wa.me/5542999896358" class="btn btn-primary" style="padding: 1.5rem 3.5rem;">Quero estruturar
+          meu marketing</a>
+        <a href="https://wa.me/5542999896358" class="btn btn-secondary" style="padding: 1.5rem 3.5rem;">Falar com um
+          especialista</a>
       </div>
-    </footer>
-  </div>
+    </div>
+  </section>
+
+  <!-- Simple Sub-Footer -->
+  <footer style="padding: 4rem 0; border-top: 1px solid var(--color-gray-200);">
+    <div class="container"
+      style="display: flex; justify-content: space-between; color: #64748b; font-size: 0.9rem; font-weight: 600;">
+      <div>&copy; 2026 NorthWay Company. Processo e Previsibilidade.</div>
+      <div>Desenhado para o Legado.</div>
+    </div>
+  </footer>
 
   <script type="module" src="/main.js"></script>
 </body>
