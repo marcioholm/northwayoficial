@@ -23,6 +23,15 @@ window.addEventListener('load', () => {
     }, 1000);
 });
 
+// Parallax for Loop Visual
+window.addEventListener('scroll', () => {
+    const loopSvg = document.querySelector('.loop-svg');
+    if (loopSvg) {
+        const scroll = window.pageYOffset;
+        loopSvg.style.transform = `translateY(${scroll * 0.05}px) rotate(${scroll * 0.01}deg)`;
+    }
+});
+
 // Discrete Scroll Reveal Logic
 function revealSections() {
     const reveals = document.querySelectorAll('.reveal');
