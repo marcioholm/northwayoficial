@@ -5,11 +5,21 @@ if (window.lucide) {
     window.lucide.createIcons();
 }
 
+// Header Scroll Behavior
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
 // Discrete Scroll Reveal Logic
 function revealSections() {
     const reveals = document.querySelectorAll('.reveal');
     const windowHeight = window.innerHeight;
-    const revealPoint = 150;
+    const revealPoint = 100;
 
     reveals.forEach(reveal => {
         const revealTop = reveal.getBoundingClientRect().top;
