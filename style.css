@@ -426,6 +426,11 @@ nav {
         padding: 6rem 0;
     }
 
+    .hero {
+        padding-top: 20rem;
+        /* Increased to ensure headline is below the fixed header */
+    }
+
     .btn {
         width: 100%;
         padding: 1.4rem 1rem;
@@ -440,4 +445,51 @@ nav {
     .method-card {
         padding: 2.5rem 2rem;
     }
+}
+
+/* Footer Social & Contact Polish */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.footer-social a {
+    color: rgba(255, 255, 255, 0.4);
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+}
+
+.footer-social a:hover {
+    color: var(--color-red);
+    transform: translateY(-3px);
+}
+
+.footer-contact {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.footer-contact:hover {
+    color: var(--color-red);
 }
