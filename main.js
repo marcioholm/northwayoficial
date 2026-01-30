@@ -15,6 +15,14 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Premium Preloader Logic
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    setTimeout(() => {
+        preloader.classList.add('fade-out');
+    }, 1000);
+});
+
 // Discrete Scroll Reveal Logic
 function revealSections() {
     const reveals = document.querySelectorAll('.reveal');
