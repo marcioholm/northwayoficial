@@ -191,8 +191,9 @@ nav {
 }
 
 .logo-mono {
-    filter: brightness(0);
-    /* Ensure it is pure black just in case */
+    /* filter: brightness(0); Removed as it causes black square on non-transparent images */
+    max-height: 52px;
+    /* Ensure size stability */
 }
 
 .nav-links {
