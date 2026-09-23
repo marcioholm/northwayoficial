@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diagnóstico estratégico | NorthWay</title>
+  <meta name="description" content="Conte um pouco sobre sua empresa e converse com a NorthWay sobre seus próximos passos.">
+  <link rel="icon" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/captacao.css">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
+  <script type="module" src="/captacao.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a href="/" aria-label="Voltar ao site NorthWay"><img src="/logo-black.png" alt="NorthWay"></a><span>Diagnóstico estratégico</span></header>
+  <main class="layout">
+    <div class="intro"><span class="eyebrow">NORTHWAY · DIAGNÓSTICO INICIAL</span><h1>Vamos entender o momento da sua empresa.</h1><p>Responda algumas perguntas rápidas. Ao final, você pode iniciar uma conversa com nossa equipe no WhatsApp.</p></div>
+    <section class="card" aria-label="Formulário de contato">
+      <div class="progress"><span id="progressLabel">Pergunta 1 de 6</span><div class="track"><div id="progressBar"></div></div></div>
+      <form id="captureForm" novalidate>
+        <label id="question" for="answer"></label>
+        <p class="hint" id="hint"></p>
+        <div id="field"></div>
+        <div id="consentArea" hidden><label class="check"><input type="checkbox" id="consent"> Autorizo a NorthWay a entrar em contato comigo pelo WhatsApp sobre esta solicitação. <a href="/politica-de-privacidade.html" target="_blank" rel="noopener">Política de privacidade</a>.</label></div>
+        <div id="turnstile"></div>
+        <p class="error" id="error" role="alert" aria-live="polite"></p>
+        <button type="submit" class="button" id="next">Continuar <span aria-hidden="true">→</span></button>
+      </form>
+      <div id="done" hidden><div class="success-icon">✓</div><h2>Obrigado pelas respostas!</h2><p>Seu contato já chegou à NorthWay. Para começar a conversa agora, toque no botão abaixo.</p><a id="whatsappLink" class="button" target="_blank" rel="noopener">Conversar no WhatsApp ↗</a></div>
+      <p class="privacy">Suas respostas são salvas ao avançar em cada etapa.</p>
+    </section>
+  </main>
+</body>
+</html>

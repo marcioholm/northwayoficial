@@ -3,6 +3,10 @@
     "trailingSlash": false,
     "rewrites": [
         {
+            "source": "/captacao",
+            "destination": "/captacao.html"
+        },
+        {
             "source": "/(.*)",
             "destination": "/index.html"
         }
